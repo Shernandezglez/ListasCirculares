@@ -1,0 +1,10 @@
+C:\Users\ASKII.DESKTOP-D39ELPS\source\repos\ListasCirculares\ListasCirculares\obj\Debug\ListasCirculares.csprojAssemblyReference.cache
+C:\Users\ASKII.DESKTOP-D39ELPS\source\repos\ListasCirculares\ListasCirculares\obj\Debug\ListasCirculares.Form1.resources
+C:\Users\ASKII.DESKTOP-D39ELPS\source\repos\ListasCirculares\ListasCirculares\obj\Debug\ListasCirculares.Properties.Resources.resources
+C:\Users\ASKII.DESKTOP-D39ELPS\source\repos\ListasCirculares\ListasCirculares\obj\Debug\ListasCirculares.csproj.GenerateResource.cache
+C:\Users\ASKII.DESKTOP-D39ELPS\source\repos\ListasCirculares\ListasCirculares\obj\Debug\ListasCirculares.csproj.CoreCompileInputs.cache
+C:\Users\ASKII.DESKTOP-D39ELPS\source\repos\ListasCirculares\ListasCirculares\bin\Debug\ListasCirculares.exe.config
+C:\Users\ASKII.DESKTOP-D39ELPS\source\repos\ListasCirculares\ListasCirculares\bin\Debug\ListasCirculares.exe
+C:\Users\ASKII.DESKTOP-D39ELPS\source\repos\ListasCirculares\ListasCirculares\bin\Debug\ListasCirculares.pdb
+C:\Users\ASKII.DESKTOP-D39ELPS\source\repos\ListasCirculares\ListasCirculares\obj\Debug\ListasCirculares.exe
+C:\Users\ASKII.DESKTOP-D39ELPS\source\repos\ListasCirculares\ListasCirculares\obj\Debug\ListasCirculares.pdb

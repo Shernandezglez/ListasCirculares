@@ -8,55 +8,149 @@ namespace ListasCirculares
 {
     class Terminal
     {
-        Ruta inicio = null;
+        Base inicio = null;
+        Base ultimo = null;
 
-        public void agregarFinal(Ruta nuevo)
+        public void agregarFinal(Base nuevo)
         {
-            if (inicio == null)
+           if(inicio == null)
             {
                 inicio = nuevo;
+                inicio.Siguiente = inicio;
+                ultimo = inicio;
             }
-                
             else
             {
-                Ruta temp = inicio; 
-                while(temp.Siguiente != null)
-                {
-                    temp = temp.Siguiente;
-                    temp.Siguiente = inicio;
-                }
-                temp.Siguiente = nuevo;
+                ultimo.Siguiente = nuevo;
+                nuevo.Siguiente = inicio;
+                ultimo = nuevo;
             }
         }
 
-        public Ruta buscar(string nombre)
+        public string listar()
         {
-            Ruta temp = inicio;
+            string cdn = "";
 
-            while(temp != null)
+            Base temp = inicio;
+
+            do
             {
-                if(temp.NombreRuta == nombre)
+                cdn += temp.ToString() + "\r\n";
+                temp = temp.Siguiente;
+
+            } while (temp != inicio);
+
+
+            return cdn;
+        }
+
+        public Base buscar(string nombre)
+        {
+            Base temp = inicio;
+
+            do
+            {
+                if (temp.NombreBase == nombre)
                 {
                     return temp;
                 }
-
                 temp = temp.Siguiente;
-            }
+               
+            } while (temp != inicio);
+
             return null;
         }
 
-        public Ruta eliminarInicio()
-        {
-            Ruta temp = inicio;
-            temp = inicio.Siguiente;
-            temp.Siguiente = temp;
 
-            return inicio;
+        public Base eliminarInicio()
+        {
+
+            Base temp = inicio;
+
+            inicio = inicio.Siguiente;
+
+            return temp;
         }
 
-        public Ruta eliminarUltimo()
+        public Base eliminarUltimo()
         {
-             
+           Base temp = ultimo;
+
+            return temp;
+         
         }
+
+        public Base eliminar(string nombreBase)
+        {
+            Base temp = inicio;
+
+            if(inicio.NombreBase == nombreBase)
+            {
+                temp = ultimo;
+                ultimo = inicio.Siguiente;
+                return temp;
+            }
+            else if(ultimo.NombreBase == nombreBase)
+            {
+
+            }
+            else
+            {
+                do
+                {
+                    if (temp.NombreBase == nombreBase)
+                    {
+                        temp.Siguiente = temp.Siguiente.Siguiente;
+                        
+                        return temp;
+                    }
+                    temp = temp.Siguiente;
+                } while (temp != inicio);
+            }
+
+            return null;
+        }
+        // 1  2  3  4                       1  2  3  4  5
+       // aa ss dd ff   b = gg pos= 3 ---> aa ss gg dd ff
+        public void insertar(Base b, int pos)
+        {
+            Base c = inicio;
+            Base temp;
+            int num = 1;
+
+            if(inicio == null)
+            {
+                inicio = b;
+                ultimo = b;
+            }
+            else
+            {
+                while(num != pos)
+                {
+                    c = c.Siguiente;
+                    num++;
+                }
+                temp = c;
+                temp = b;
+                temp.Siguiente = c;
+                ultimo = ultimo.Siguiente;
+                
+               
+                
+            }
+
+
+        }
+
+        public string ruta(Base nombreBase, int horaInicio, int horaFinal)
+        {
+            string cdn = "";
+
+
+            return cdn;
+        }
+      
+     
+
     }
 }

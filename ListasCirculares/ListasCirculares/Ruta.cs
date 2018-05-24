@@ -74,11 +74,6 @@ namespace ListasCirculares
             set { _siguiente = value; }
         }
 
-        public override string ToString()
-        {
-            return "Ruta: " + _nombreRuta + " | " + "Hora de inicio: " + _horaInicio + " | "
-                + "En la base: " + _nombreBase + " | " + "Finalizó: " + _horaFinal
-                + " | " + "En la base: " + _baseFinal + " | " + "Con un tiempo de: " + _tiempo;
-        }
+        
     }
 }
