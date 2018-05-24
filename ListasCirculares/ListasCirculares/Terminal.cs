@@ -142,9 +142,25 @@ namespace ListasCirculares
 
         }
 
-        public string ruta(Base nombreBase, int horaInicio, int horaFinal)
+        public string ruta(string nombreBase, int horaInicio, int horaFinal)
         {
             string cdn = "";
+            Base temp = inicio;
+
+            do
+            {
+                if(temp.NombreBase == nombreBase && temp == inicio)
+                {
+                    cdn = "Ruta 7 " + " | " + "Hora de inicio: " + horaInicio + " | " + "Hora final: " + horaFinal; 
+                }
+                else
+                {
+
+                }
+
+                temp = temp.Siguiente;
+
+            } while (temp != inicio);
 
 
             return cdn;

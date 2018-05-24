@@ -27,7 +27,7 @@ namespace ListasCirculares
 
         private void button8_Click(object sender, EventArgs e)
         {
-
+            txtRecorrido.Text = ter.ruta(txtDato.Text, 7,9);
         }
 
         private void btnListar_Click(object sender, EventArgs e)
