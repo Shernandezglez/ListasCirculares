@@ -20,14 +20,14 @@ namespace ListasCirculares
         Terminal ter = new Terminal();
         private void btnAgregarBase_Click(object sender, EventArgs e)
         {
-            Base nuevo = new Base(txtBase.Text);
+            Base nuevo = new Base(txtBase.Text, Convert.ToInt32(txtTiempo.Text));
 
             ter.agregarFinal(nuevo);
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            txtRecorrido.Text = ter.ruta(txtDato.Text, 7,9);
+            txtRecorrido.Text = ter.ruta(txtDato.Text, Convert.ToDateTime(txtHoraInicio.Text), Convert.ToDateTime(txtHoraFinal.Text));
         }
 
         private void btnListar_Click(object sender, EventArgs e)
@@ -58,7 +58,7 @@ namespace ListasCirculares
 
         private void btnInsertar_Click(object sender, EventArgs e)
         {
-            Base nuevo = new Base(txtBase.Text);
+            Base nuevo = new Base(txtBase.Text, Convert.ToInt32(txtTiempo.Text));
             ter.insertar(nuevo, Convert.ToInt32(txtDato.Text));
         }
     }

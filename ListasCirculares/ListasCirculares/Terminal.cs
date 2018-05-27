@@ -71,10 +71,16 @@ namespace ListasCirculares
 
             return temp;
         }
-
+        // pr|  |  | ultimo           f   l
+        // 1 | 2| 3| 4                1 2 3 3.sig = inicio;  4= null;   
+        // aa|ss|dd| ff
         public Base eliminarUltimo()
         {
-           Base temp = ultimo;
+            Base temp = ultimo, temp2 = inicio ;
+           
+            temp2 = temp2.Siguiente;
+            ultimo = temp2.Siguiente;
+            ultimo.Siguiente = inicio;
 
             return temp;
          
@@ -82,7 +88,7 @@ namespace ListasCirculares
 
         public Base eliminar(string nombreBase)
         {
-            Base temp = inicio;
+            Base temp = inicio, tempU = ultimo;
 
             if(inicio.NombreBase == nombreBase)
             {
@@ -92,7 +98,12 @@ namespace ListasCirculares
             }
             else if(ultimo.NombreBase == nombreBase)
             {
+                
 
+                temp = temp.Siguiente;
+                ultimo = temp.Siguiente;
+                ultimo.Siguiente = inicio;
+                return tempU;
             }
             else
             {
@@ -129,38 +140,59 @@ namespace ListasCirculares
                 {
                     c = c.Siguiente;
                     num++;
+
+                    if(c == inicio)
+                    {
+                        break;
+                    }
                 }
-                temp = c;
-                temp = b;
-                temp.Siguiente = c;
-                ultimo = ultimo.Siguiente;
-                
-               
-                
+
+                if (num == pos)
+                {
+                    temp = c;
+                    c.Siguiente = temp;
+                    temp = c.Siguiente;
+                    temp.Siguiente = ultimo;
+                    ultimo.Siguiente = inicio;
+                    c = b;
+                    
+                } 
             }
 
 
         }
 
-        public string ruta(string nombreBase, int horaInicio, int horaFinal)
+        public string ruta(string nombreBase, DateTime horaInicio, DateTime horaFinal)
         {
             string cdn = "";
+            DateTime tiempo;
             Base temp = inicio;
 
-            do
+            while(temp.NombreBase != nombreBase)
             {
-                if(temp.NombreBase == nombreBase && temp == inicio)
-                {
-                    cdn = "Ruta 7 " + " | " + "Hora de inicio: " + horaInicio + " | " + "Hora final: " + horaFinal; 
-                }
-                else
-                {
-
-                }
-
                 temp = temp.Siguiente;
 
-            } while (temp != inicio);
+                if (temp == inicio)
+                    break;
+            }
+
+            if(temp.NombreBase == nombreBase)
+            {
+                tiempo = horaInicio;
+                cdn = "Base: " + nombreBase + " Tiempo: " + tiempo.ToShortTimeString() + "\r\n";
+
+                while(tiempo < horaFinal)
+                {
+                    temp = temp.Siguiente;
+                    tiempo = tiempo.AddMinutes(temp.Tiempo);
+
+                    cdn += "Base: " + nombreBase + " Tiempo: " + tiempo.ToShortTimeString() + "\r\n"; 
+                }
+            }
+            else
+            {
+                return null;
+            }
 
 
             return cdn;

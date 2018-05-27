@@ -41,11 +41,17 @@
             this.txtDato = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtRecorrido = new System.Windows.Forms.TextBox();
+            this.txtTiempo = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtHoraInicio = new System.Windows.Forms.TextBox();
+            this.txtHoraFinal = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnAgregarBase
             // 
-            this.btnAgregarBase.Location = new System.Drawing.Point(3, 101);
+            this.btnAgregarBase.Location = new System.Drawing.Point(7, 174);
             this.btnAgregarBase.Name = "btnAgregarBase";
             this.btnAgregarBase.Size = new System.Drawing.Size(75, 23);
             this.btnAgregarBase.TabIndex = 0;
@@ -71,7 +77,7 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(97, 101);
+            this.btnBuscar.Location = new System.Drawing.Point(101, 174);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
             this.btnBuscar.TabIndex = 3;
@@ -81,7 +87,7 @@
             // 
             // btnEliminarPrimero
             // 
-            this.btnEliminarPrimero.Location = new System.Drawing.Point(196, 101);
+            this.btnEliminarPrimero.Location = new System.Drawing.Point(200, 174);
             this.btnEliminarPrimero.Name = "btnEliminarPrimero";
             this.btnEliminarPrimero.Size = new System.Drawing.Size(75, 23);
             this.btnEliminarPrimero.TabIndex = 4;
@@ -91,7 +97,7 @@
             // 
             // btnEliminarUltimo
             // 
-            this.btnEliminarUltimo.Location = new System.Drawing.Point(196, 149);
+            this.btnEliminarUltimo.Location = new System.Drawing.Point(200, 222);
             this.btnEliminarUltimo.Name = "btnEliminarUltimo";
             this.btnEliminarUltimo.Size = new System.Drawing.Size(75, 23);
             this.btnEliminarUltimo.TabIndex = 5;
@@ -101,7 +107,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(196, 200);
+            this.btnEliminar.Location = new System.Drawing.Point(200, 273);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 6;
@@ -111,7 +117,7 @@
             // 
             // btnInsertar
             // 
-            this.btnInsertar.Location = new System.Drawing.Point(3, 149);
+            this.btnInsertar.Location = new System.Drawing.Point(7, 222);
             this.btnInsertar.Name = "btnInsertar";
             this.btnInsertar.Size = new System.Drawing.Size(75, 23);
             this.btnInsertar.TabIndex = 7;
@@ -121,7 +127,7 @@
             // 
             // btnListar
             // 
-            this.btnListar.Location = new System.Drawing.Point(3, 200);
+            this.btnListar.Location = new System.Drawing.Point(7, 273);
             this.btnListar.Name = "btnListar";
             this.btnListar.Size = new System.Drawing.Size(75, 23);
             this.btnListar.TabIndex = 8;
@@ -131,7 +137,7 @@
             // 
             // btnRuta
             // 
-            this.btnRuta.Location = new System.Drawing.Point(97, 200);
+            this.btnRuta.Location = new System.Drawing.Point(101, 273);
             this.btnRuta.Name = "btnRuta";
             this.btnRuta.Size = new System.Drawing.Size(75, 23);
             this.btnRuta.TabIndex = 9;
@@ -141,7 +147,7 @@
             // 
             // txtDato
             // 
-            this.txtDato.Location = new System.Drawing.Point(145, 42);
+            this.txtDato.Location = new System.Drawing.Point(150, 115);
             this.txtDato.Name = "txtDato";
             this.txtDato.Size = new System.Drawing.Size(100, 20);
             this.txtDato.TabIndex = 10;
@@ -149,7 +155,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(179, 26);
+            this.label2.Location = new System.Drawing.Point(184, 99);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(30, 13);
             this.label2.TabIndex = 11;
@@ -163,11 +169,65 @@
             this.txtRecorrido.Size = new System.Drawing.Size(341, 352);
             this.txtRecorrido.TabIndex = 12;
             // 
+            // txtTiempo
+            // 
+            this.txtTiempo.Location = new System.Drawing.Point(22, 115);
+            this.txtTiempo.Name = "txtTiempo";
+            this.txtTiempo.Size = new System.Drawing.Size(100, 20);
+            this.txtTiempo.TabIndex = 13;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(47, 99);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(42, 13);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Tiempo";
+            // 
+            // txtHoraInicio
+            // 
+            this.txtHoraInicio.Location = new System.Drawing.Point(150, 42);
+            this.txtHoraInicio.Name = "txtHoraInicio";
+            this.txtHoraInicio.Size = new System.Drawing.Size(100, 20);
+            this.txtHoraInicio.TabIndex = 15;
+            // 
+            // txtHoraFinal
+            // 
+            this.txtHoraFinal.Location = new System.Drawing.Point(273, 42);
+            this.txtHoraFinal.Name = "txtHoraFinal";
+            this.txtHoraFinal.Size = new System.Drawing.Size(100, 20);
+            this.txtHoraFinal.TabIndex = 16;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(166, 26);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(72, 13);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Hora de inicio";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(293, 26);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(52, 13);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Hora final";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtHoraFinal);
+            this.Controls.Add(this.txtHoraInicio);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtTiempo);
             this.Controls.Add(this.txtRecorrido);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtDato);
@@ -203,6 +263,12 @@
         private System.Windows.Forms.TextBox txtDato;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtRecorrido;
+        private System.Windows.Forms.TextBox txtTiempo;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtHoraInicio;
+        private System.Windows.Forms.TextBox txtHoraFinal;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
 
