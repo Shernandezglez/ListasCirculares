@@ -35,8 +35,16 @@ namespace ListasCirculares
 
             do
             {
-                cdn += temp.ToString() + "\r\n";
-                temp = temp.Siguiente;
+                if(inicio == null)
+                {
+                    cdn = "vacio";
+                }
+                else
+                {
+                    cdn += temp.ToString() + "\r\n";
+                    temp = temp.Siguiente;
+                }
+                
 
             } while (temp != inicio);
 
@@ -67,7 +75,15 @@ namespace ListasCirculares
 
             Base temp = inicio;
 
-            inicio = inicio.Siguiente;
+            if(inicio.Siguiente == inicio)
+            {
+                inicio = null;
+            }
+            else
+            {
+                inicio = inicio.Siguiente;
+            }
+           
 
             return temp;
         }
@@ -77,7 +93,8 @@ namespace ListasCirculares
         public Base eliminarUltimo()
         {
             Base temp = ultimo, temp2 = inicio ;
-           
+
+            while(temp2 != null)
             temp2 = temp2.Siguiente;
             ultimo = temp2.Siguiente;
             ultimo.Siguiente = inicio;
@@ -178,15 +195,16 @@ namespace ListasCirculares
 
             if(temp.NombreBase == nombreBase)
             {
+                cdn = "";
                 tiempo = horaInicio;
-                cdn = "Base: " + nombreBase + " Tiempo: " + tiempo.ToShortTimeString() + "\r\n";
+                //cdn = "Base: " + nombreBase + " Tiempo: " + tiempo.ToShortTimeString() + "\r\n";
 
                 while(tiempo < horaFinal)
                 {
+                    cdn += "Base: " + temp.NombreBase + " Tiempo: " + tiempo.ToShortTimeString() + "\r\n";
+
                     temp = temp.Siguiente;
                     tiempo = tiempo.AddMinutes(temp.Tiempo);
-
-                    cdn += "Base: " + nombreBase + " Tiempo: " + tiempo.ToShortTimeString() + "\r\n"; 
                 }
             }
             else
